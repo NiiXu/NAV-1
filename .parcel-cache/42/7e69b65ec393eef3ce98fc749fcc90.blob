@@ -1,0 +1,35 @@
+const $siteList = $(".siteList");
+const hasMap = [
+  { logo: "A", logoType:'text', url: "https://www.acfun.cn" },
+  { logo: "./imgs/bilibililogo.png",logoType:'image', url: "https://www.bilibili.com" },
+];
+
+hasMap.forEach((node) => {
+  const $li = $(`<li>
+    <a href="${node.url}">
+            <div class="site">
+              <div class="logo">${}</div>
+              <div class="link">acfun.cn</div>
+            </div>
+          </a>
+  </li>`);
+});
+
+$(".addButton").on("click", () => {
+  let url = window.prompt("请问你要添加的网站");
+  if (url.indexOf("http") !== 0) {
+    url = "https://" + url;
+  }
+  console.log(url);
+  const $siteList = $(".siteList");
+  const $lastList = $siteList.find("li.last");
+  console.log($siteList);
+  const $site = $(`<li>
+  <a href="${url}">
+        <div class="site">
+            <div class="logo">${url[0]}</div>
+            <div class="link">${url}</div>
+        </div>
+    </a>
+  </li>`).insertBefore($lastList);
+});

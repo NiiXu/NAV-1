@@ -1,0 +1,20 @@
+.globaHeader {
+}
+.globaHeader > input {
+}
+.globaHeader > button {
+}
+.globaMain {
+}
+.siteList {
+}
+.siteList > li {
+}
+.siteList .site {
+}
+.siteList .site > .logo {
+}
+.siteList .site > .link {
+}
+.siteList .addButton {
+}

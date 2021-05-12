@@ -1,0 +1,6 @@
+$(".addButton").on("click", () => {
+  const url = window.prompt("请问你要添加的网站");
+    if(url.indexOf('http')!=== 0){
+
+    }
+});

@@ -1,0 +1,12 @@
+$(".addButton").on("click", () => {
+  let url = window.prompt("请问你要添加的网站");
+  if (url.indexOf("http") !== 0) {
+    url = "https://" + url;
+  }
+  console.log(url);
+  const $siteList = $(".siteList");
+  console.log($siteList);
+  const $site = $(`<li>
+  
+  </li>`);
+});
